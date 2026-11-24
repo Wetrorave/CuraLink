@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.curalink.ui.auth.LoginFragment"
+        android:label="Login">
+        <action
+            android:id="@+id/action_login_to_home"
+            app:destination="@id/homeFragment"
+            app:popUpTo="@id/loginFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.curalink.ui.home.HomeFragment"
+        android:label="CuraLink">
+        <action
+            android:id="@+id/action_home_to_doctor"
+            app:destination="@id/doctorDetailFragment" />
+        <action
+            android:id="@+id/action_home_to_appointments"
+            app:destination="@id/appointmentsFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorDetailFragment"
+        android:name="com.curalink.ui.doctor.DoctorDetailFragment"
+        android:label="Perfil do Médico">
+        <argument
+            android:name="doctorId"
+            app:argType="string" />
+        <argument
+            android:name="doctorName"
+            app:argType="string" />
+        <argument
+            android:name="specialty"
+            app:argType="string" />
+        <argument
+            android:name="location"
+            app:argType="string" />
+        <argument
+            android:name="biography"
+            app:argType="string" />
+        <argument
+            android:name="slots"
+            app:argType="string[]" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appointmentsFragment"
+        android:name="com.curalink.ui.appointments.AppointmentsFragment"
+        android:label="Minhas Consultas" />
+</navigation>
