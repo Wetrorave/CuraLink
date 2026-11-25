@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1017228341443",
+    "project_id": "curalink-f2b2b",
+    "storage_bucket": "curalink-f2b2b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1017228341443:android:a132ea88b4faa72bf13276",
+        "android_client_info": {
+          "package_name": "com.curalink"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDbUsL4JDIYDWEl7kl-dH1Vk1qAUkUeJHk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

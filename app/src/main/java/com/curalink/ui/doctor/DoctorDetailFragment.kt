@@ -28,7 +28,7 @@ class DoctorDetailFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
-        savedInstanceState: Bundle?
+        savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentDoctorDetailBinding.inflate(inflater, container, false)
         return binding.root
@@ -57,9 +57,9 @@ class DoctorDetailFragment : Fragment() {
                     selectedDate = "%02d/%02d/%04d".format(day, month + 1, year)
                     binding.btnPickDate.text = "Data: $selectedDate"
                 },
-                calendar.get(Calendar.YEAR),
-                calendar.get(Calendar.MONTH),
-                calendar.get(Calendar.DAY_OF_MONTH)
+                calendar[Calendar.YEAR],
+                calendar[Calendar.MONTH],
+                calendar[Calendar.DAY_OF_MONTH],
             ).show()
         }
 
@@ -85,7 +85,7 @@ class DoctorDetailFragment : Fragment() {
                 Toast.makeText(
                     requireContext(),
                     "Escolha a data e o horário da consulta",
-                    Toast.LENGTH_SHORT
+                    Toast.LENGTH_SHORT,
                 ).show()
                 return@setOnClickListener
             }
@@ -99,7 +99,7 @@ class DoctorDetailFragment : Fragment() {
                 location = location,
                 date = selectedDate,
                 time = selectedTime,
-                status = "Agendado"
+                status = "Agendado",
             )
 
             viewLifecycleOwner.lifecycleScope.launch {
@@ -107,14 +107,14 @@ class DoctorDetailFragment : Fragment() {
                     Toast.makeText(
                         requireContext(),
                         "Consulta confirmada para $selectedDate às $selectedTime",
-                        Toast.LENGTH_LONG
+                        Toast.LENGTH_LONG,
                     ).show()
                     findNavController().popBackStack()
                 }.onFailure { error ->
                     Toast.makeText(
                         requireContext(),
                         error.localizedMessage ?: "Erro ao agendar",
-                        Toast.LENGTH_SHORT
+                        Toast.LENGTH_SHORT,
                     ).show()
                 }
             }

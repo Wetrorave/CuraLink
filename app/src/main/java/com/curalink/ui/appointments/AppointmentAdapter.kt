@@ -1,3 +1,4 @@
+// ui/appointments/AppointmentAdapter.kt
 package com.curalink.ui.appointments
 
 import android.view.LayoutInflater

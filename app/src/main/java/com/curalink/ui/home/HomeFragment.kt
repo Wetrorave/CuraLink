@@ -85,11 +85,11 @@ class HomeFragment : Fragment() {
         val query = binding.etSearch.text?.toString().orEmpty().trim().lowercase()
         val filtered = allDoctors.filter { doctor ->
             val matchesSpecialty = selectedSpecialty == null ||
-                doctor.specialty.equals(selectedSpecialty, ignoreCase = true)
+                    doctor.specialty.equals(selectedSpecialty, ignoreCase = true)
             val matchesQuery = query.isEmpty() ||
-                doctor.name.lowercase().contains(query) ||
-                doctor.specialty.lowercase().contains(query) ||
-                doctor.location.lowercase().contains(query)
+                    doctor.name.lowercase().contains(query) ||
+                    doctor.specialty.lowercase().contains(query) ||
+                    doctor.location.lowercase().contains(query)
             matchesSpecialty && matchesQuery
         }
         adapter.updateList(filtered)

@@ -1,10 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFF</color>
-    <color name="black">#000000</color>
     <color name="surface_subtle">#F7F8FA</color>
-    <color name="border_light">#E2E5E9</color>
-    <color name="text_primary">#181A1F</color>
-    <color name="text_secondary">#5F6672</color>
-    <color name="accent_subtle">#2D3748</color>
+    <color name="border_light">#E2E6EC</color>
+
+    <color name="text_primary">#14171A</color>
+    <color name="text_secondary">#5C6672</color>
+    <color name="text_muted">#8A94A0</color>
+    <color name="icon_tint">#374151</color>
+
+    <color name="accent_subtle">#1E5B7A</color>
+    <color name="accent_subtle_dark">#15435A</color>
+    <color name="accent_soft_tint">#EAF2F6</color>
 </resources>
